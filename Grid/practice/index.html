@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+        }
+        .gird-item{
+            background-color: rgb(75, 251, 122);
+        }
+        .container-grid{
+            display: grid;
+          /*  grid-template-rows: 100px 200px;
+            grid-template-columns: 400px 800px;
+            gap: 10px; */
+           /* grid-template: 100px 200px/ 400px 800px; */
+           grid-template-rows: 100px auto;
+           grid-template-columns: 200 auto;
+        }
+        .grid-items{
+            background-color: rgb(153, 22, 120);
+            color: white;
+        }
+        .box{
+            display: grid;
+            gap: 0;
+            grid-template-rows:200px 400px;
+            grid-template-columns: 200px minmax(400px, 800px);
+        }
+        .item{
+            background-color: red;
+            border: 10px solid blue
+        }
+        .box-model{
+            display: grid;
+            grid-template-rows: repeat(2, 200px);
+            grid-template-columns: repeat(2, 100px);
+            grid-auto-rows: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p class="gird-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem maiores, libero quo hic inventore, necessitatibus molestias reprehenderit quibusdam vitae harum labore in eum est impedit voluptate quae nesciunt, illum officia!</p>
+    <p class="gird-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem maiores, libero quo hic inventore, necessitatibus molestias reprehenderit quibusdam vitae harum labore in eum est impedit voluptate quae nesciunt, illum officia!</p>
+    <p class="gird-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem maiores, libero quo hic inventore, necessitatibus molestias reprehenderit quibusdam vitae harum labore in eum est impedit voluptate quae nesciunt, illum officia!</p>
+    <p class="gird-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem maiores, libero quo hic inventore, necessitatibus molestias reprehenderit quibusdam vitae harum labore in eum est impedit voluptate quae nesciunt, illum officia!</p>
+</div>
+<div class="container-grid">
+    <p class="grid-items">1</p>
+    <p class="grid-items">2</p>
+    <p class="grid-items">3</p>
+    <p class="grid-items">4</p> 
+</div>
+
+<div class="box">
+    <p class="item">A</p>
+    <p class="item">B</p>
+    <p class="item">C</p>
+    <p class="item">D</p>
+    </div>
+
+    <div class="box-model">
+        <div class="item">5</div>
+        <div class="item">5</div>
+        <div class="item">5</div>
+        <div class="item">5</div> 
+        <div class="item">5</div>   
+    </div>
+</body>
+</html>
